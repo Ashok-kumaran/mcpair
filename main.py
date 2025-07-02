@@ -56,7 +56,7 @@ st.set_page_config(page_title="Airbnb Search with MCP", layout="centered")
 
 st.title("🧭 Airbnb Search Agent")
  
-query = st.text_input("Enter your travel query:", placeholder="e.g. Find me a nice place to stay in Chennai for 4 adults from July 1st to 4th")
+query = st.text_input("Enter your travel plan:", placeholder="e.g. Find me a nice place to stay in Chennai for 4 adults from July 1st to 4th")
  
 if st.button("Search"):
 
