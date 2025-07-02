@@ -13,9 +13,9 @@ from mcp_use import MCPAgent, MCPClient
 import warnings
  
 warnings.filterwarnings("ignore", category=ResourceWarning)
- 
-LLM_DEPLOYMENT_ID = "d38dd2015862a15d"
- 
+
+# os.environ["LLM_DEPLOYMENT_ID"] = "LLM_DEPLOYMENT_ID"  # Replace with your actual deployment ID
+
 # Load environment variables
 
 load_dotenv()
@@ -30,7 +30,7 @@ def setup_agent():
 
     )
 
-    llm = ChatOpenAI(deployment_id=LLM_DEPLOYMENT_ID)
+    llm = ChatOpenAI(deployment_id=os.environ["LLM_DEPLOYMENT_ID"])
 
     agent = MCPAgent(llm=llm, client=client, max_steps=30, verbose=False)
 
